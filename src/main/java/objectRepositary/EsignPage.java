@@ -1,5 +1,4 @@
 package objectRepositary;
 
-public class Esign {
-
+public class EsignPage {
 }

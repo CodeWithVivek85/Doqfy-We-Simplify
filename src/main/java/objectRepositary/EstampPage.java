@@ -3,7 +3,7 @@ package objectRepositary;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class Estamp {
+public class EstampPage {
 	@FindBy(id = "custom")
 	private WebElement selectCustomRadioButton;
 	@FindBy(xpath = "//input[@placeholder=\"Enter first party name\"]")
