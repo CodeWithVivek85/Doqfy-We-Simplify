@@ -40,5 +40,10 @@
 		</dependency>
 
 
+		<dependency>
+			<groupId>Doqfy_CE</groupId>
+			<artifactId>Doqfy_CE</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
 </project>
