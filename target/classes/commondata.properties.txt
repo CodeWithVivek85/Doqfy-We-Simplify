@@ -1,0 +1,3 @@
+url https://uat.doqfy.in/login
+userName vivek@doqfy.in
+password Contract@123
