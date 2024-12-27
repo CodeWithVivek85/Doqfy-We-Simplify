@@ -20,9 +20,9 @@ public class ExcelUtility {
 	 * @return
 	 * @throws Throwable
 	 */
-	public String getDataFromExcel(String sheetName , int rowNum , int celNum) throws Throwable {
+	public static String getDataFromExcel(String sheetName , int rowNum , int celNum) throws Throwable {
 		
-		FileInputStream fis = new FileInputStream("./testdata/testScriptdata.xlsx");
+		FileInputStream fis = new FileInputStream("./src/main/resources/TestData.xlsx");
 		Workbook wb =  WorkbookFactory.create(fis);
 	    String data = wb.getSheet(sheetName).getRow(rowNum).getCell(celNum).getStringCellValue();
 	    wb.close();
@@ -49,6 +49,7 @@ public class ExcelUtility {
 	 * @param data
 	 * @throws EncryptedDocumentException
 	 * @throws IOException
+	 *
 	 */
 	public void setDataIntoExcel(String sheetName , int rowNum , int celNum , String data) throws EncryptedDocumentException, IOException {
 		FileInputStream fis = new FileInputStream("./testdata/testScriptdata.xlsx");

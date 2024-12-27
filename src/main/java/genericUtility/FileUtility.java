@@ -15,7 +15,7 @@ public class FileUtility {
 	 */
 public String getDataFromPropertiesFile(String key) throws Throwable {
 		
-		FileInputStream fis = new FileInputStream("./config_env_data/configEnvdata.properties");
+		FileInputStream fis = new FileInputStream("./src/main/resources/commondata.properties");
 		Properties pObj = new Properties();
 		pObj.load(fis);
 		String data = pObj.getProperty(key);
