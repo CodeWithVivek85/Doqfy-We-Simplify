@@ -36,6 +36,11 @@ public class EstampPage {
 	private WebElement selectBranch;
 	@FindBy(xpath = "//span[.='Select Article Number']")
 	private WebElement selectArticleNumber;
+	@FindBy(xpath = "//input[@class=\"p-dropdown-filter p-inputtext p-component\"]")
+	private WebElement enterArticleNumber;
+	@FindBy(xpath = "//span[.='Article 5 j Agreement (in any other cases)']")
+	private WebElement selectArticle5j;
+	
 	@FindBy(id = "no")
 	private WebElement ContinueWithoutPayment;
 	@FindBy(id = "yes")
@@ -46,7 +51,21 @@ public class EstampPage {
 	private WebElement yesButtomToCompleteContract;
 	@FindBy(xpath = "//span[.='No']")
 	private WebElement noButtomToCancelContract;
+	@FindBy(xpath = "//span[.='Next']")
+	private WebElement nextButton;
+	@FindBy(xpath = "//span[.='Yes']")
+	private WebElement yesAllDetailsAreCorrect;
+	@FindBy(xpath = "//span[.='No , Proceed to Place Order']")
+	public WebElement proceedToPlaceOrder;
 	
+	
+	
+	public WebElement getProceedToPlaceOrder() {
+		return proceedToPlaceOrder;
+	}
+	public WebElement getYesAllDetailsAreCorrect() {
+		return yesAllDetailsAreCorrect;
+	}
 	public WebElement getSelectCustomRadioButton() {
 		return selectCustomRadioButton;
 	}
@@ -98,7 +117,15 @@ public class EstampPage {
 	public WebElement getNoButtomToCancelContract() {
 		return noButtomToCancelContract;
 	}
-	
+	public WebElement getEnterArticleNumber() {
+		return enterArticleNumber;
+	}
+	public WebElement getSelectArticle5j() {
+		return selectArticle5j;
+	}
+	public WebElement getNextButton() {
+		return nextButton;
+	}
 	
 }
 

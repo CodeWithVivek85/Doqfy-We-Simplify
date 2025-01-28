@@ -3,12 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Com.Doqfy.Automation.Web.Esign.ExecuteEsign_Test">
+      <class name="Com.Doqfy.Automation.Web.Esign.Execute_CatUpload_Test">
         <methods>
-          <include name="eSignWithSingleSign"/>
+          <include name="CatUpload"/>
+          <include name="logOutFromCLM"/>
           <include name="loginToClM"/>
         </methods>
-      </class> <!-- Com.Doqfy.Automation.Web.Esign.ExecuteEsign_Test -->
+      </class> <!-- Com.Doqfy.Automation.Web.Esign.Execute_CatUpload_Test -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

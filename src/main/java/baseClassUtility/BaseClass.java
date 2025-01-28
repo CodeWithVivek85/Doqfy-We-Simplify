@@ -74,16 +74,38 @@ public class BaseClass {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollBy(0,300);");
 	}
+	public void scrollToMiddleOfThePageForEstamp() throws Throwable {
+		Thread.sleep(200);
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(0,350);");
+        Thread.sleep(200);
+	}
+	public void scrollToTopOfThePageForEstamp() throws Throwable {
+		 try {
+			 Thread.sleep(200);
+	            // Scroll to the top of the page
+	            JavascriptExecutor js = (JavascriptExecutor) driver;
+	            js.executeScript("window.scrollTo(0, 0);");
+
+	            System.out.println("Scrolled to the top of the page.");
+	        } catch (Exception e) {
+	            System.err.println("Error occurred: " + e.getMessage());
+	        } 
+		 Thread.sleep(200);
+	    
+	}
 	/**
+	 * @throws InterruptedException 
 	 * 
 	 */
-	public void scrollToTheBottom() {
+	public void scrollToTheBottom()  {
 		Actions action = new Actions(driver);
+		
 		try {
 			for (int i = 0; i < 5; i++) {
 				// Adjust number of iterations as needed
 				action.sendKeys(org.openqa.selenium.Keys.END).perform();
-				Thread.sleep(500);// Pause to allow scrolling to stabilize
+				Thread.sleep(200);// Pause to allow scrolling to stabilize
 				}
 			}
 		catch (Exception e) 
@@ -91,15 +113,30 @@ public class BaseClass {
 			e.printStackTrace();
 		}
 	}
+	public void scrollToBottomOfPage() {
+		try {
+            // Use JavascriptExecutor to scroll to the bottom of the page
+            JavascriptExecutor js = (JavascriptExecutor) driver;
+            js.executeScript("window.scrollTo(0, document.body.scrollHeight);");
+
+            // Optional: Add a wait time to observe the scrolling effect
+            Thread.sleep(500);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }     
+    }
+	
 	/**
 	 * @throws InterruptedException
 	 */
 	@AfterMethod
 	public void logOutFromCLM() throws InterruptedException {
 		// LOG OUT TO THE APPLICATION-------------------------------------->
-				Thread.sleep(1000);
+				Thread.sleep(500);
 				OrderPlacePage opp= new OrderPlacePage(driver);
 				opp.getProfileDropdown().click();
+				Thread.sleep(2000);
 				opp.getLogOutOption().click();
 	}
 }

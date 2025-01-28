@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="Com.Doqfy.Automation.Web.Esign.ExecuteEsign_Test"/>
+      <class name="Com.Doqfy.Automation.Web.Esign.Execute_CatUpload_Test"/>
+      <class name="Com.Doqfy.Automation.Web.Esign.Execute_EStamp_Test"/>
+      <class name="Com.Doqfy.Automation.Web.Esign.Execute_Cat_Edit_Test"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

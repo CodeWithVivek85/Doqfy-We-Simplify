@@ -39,9 +39,9 @@ public class ExecuteEsign_Test extends BaseClass {
 		eSign.getCustomRadioButton().click();
 		
 // GET DATA FROM EXCEL---------------->
-		String eSignName =ExcelUtility.getDataFromExcel("eSign", 1, 0);
-		String eSignEmail = ExcelUtility.getDataFromExcel("eSign", 1, 1);
-		String mobileNo = ExcelUtility.getDataFromExcel("eSign", 1, 2);
+		String eSignName =ExcelUtility.getDataFromExcelEsign("eSign", 1, 0);
+		String eSignEmail = ExcelUtility.getDataFromExcelEsign("eSign", 1, 1);
+		String mobileNo = ExcelUtility.getDataFromExcelEsign("eSign", 1, 2);
 		
 // SCROLL TO THE MIDDLE OF THE PAGE------------------------------>
 		scrollToMiddleOfThePage();
@@ -69,9 +69,5 @@ public class ExecuteEsign_Test extends BaseClass {
 		eSign.getSelectNopaymentOption().click();
 		eSign.getPlaceOrderButton().click();
 		eSign.getProceedWithoutPayment().click();
-
-		
-	
-		
 	}
 }

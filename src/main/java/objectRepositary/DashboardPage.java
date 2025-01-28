@@ -27,7 +27,7 @@ public class DashboardPage {
 	private WebElement catUploadOption;
 	@FindBy(xpath = "//span[.='Contract Edit']")
 	private WebElement catEdit;
-	@FindBy(xpath = "E-Stamp")
+	@FindBy(xpath = "//span[.='E-Stamp']")
 	private WebElement eStampOption;
 	@FindBy(xpath = "//span[.='E-Sign']")
 	private WebElement eSignOption;

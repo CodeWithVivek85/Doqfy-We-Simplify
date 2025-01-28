@@ -20,9 +20,17 @@ public class ExcelUtility {
 	 * @return
 	 * @throws Throwable
 	 */
-	public static String getDataFromExcel(String sheetName , int rowNum , int celNum) throws Throwable {
+	public static String getDataFromExcelEsign(String sheetName , int rowNum , int celNum) throws Throwable {
 		
 		FileInputStream fis = new FileInputStream("./src/main/resources/TestData.xlsx");
+		Workbook wb =  WorkbookFactory.create(fis);
+	    String data = wb.getSheet(sheetName).getRow(rowNum).getCell(celNum).getStringCellValue();
+	    wb.close();
+		return data;
+	}
+public static String getDataFromExcelEstamp(String sheetName , int rowNum , int celNum) throws Throwable {
+		
+		FileInputStream fis = new FileInputStream("./src/main/resources/EStamp_TestData.xlsx");
 		Workbook wb =  WorkbookFactory.create(fis);
 	    String data = wb.getSheet(sheetName).getRow(rowNum).getCell(celNum).getStringCellValue();
 	    wb.close();
